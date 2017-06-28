@@ -13,8 +13,7 @@ function createdb()
 
 function getusrlognam()
 {
-    $sql    = 'ALTER TABLE Export1
-  ADD ID varchar(45)';
+    $sql    = 'ALTER TABLE Export1 ADD ID varchar(45)';
     $result = mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
     $sql    = 'SELECT * FROM Export1';
     $result = mysql_query($sql);
