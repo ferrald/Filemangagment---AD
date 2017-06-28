@@ -20,7 +20,7 @@ function getusrlognam(){
         $reallogonname = $row["User Logon Name"];
         $id = preg_replace('/[^0-9]+/', '', $row["User Logon Name"]); //ersetzt alles durch    ausser zahlen
        //echo $row["User Logon Name"]."</br>";
-       if(!empty $id){
+       if(!empty($id)){
        $sql = "UPDATE Export1
             Set ID='".$id."' where `User Logon Name`= '".$reallogonname."'";
               echo $sql."</br>";
