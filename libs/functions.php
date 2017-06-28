@@ -28,7 +28,7 @@ function getusrlognam()
             echo $sql . "</br>";
             $result = mysql_query($sql);
         } else {
-            Echo "lol";
+            Echo "lol </br>";
         }
     }
 }
