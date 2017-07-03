@@ -36,7 +36,7 @@ function getusrlognam()
         }
     }
 }
-
+ //test
 function getRightID()
 {
     $link = dbconn();
