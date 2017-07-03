@@ -1,7 +1,7 @@
 <?php
 function deletedb()
 {
-    $sql    = 'DROP TABLE Export1';
+    $sql    = 'DROP TABLE Export1 AND Export2';
     $result = mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
 }
 
@@ -36,7 +36,7 @@ function getusrlognam()
         }
     }
 }
- //test
+
 function getRightID()
 {
     $link = dbconn();

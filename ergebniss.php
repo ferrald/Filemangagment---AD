@@ -1,4 +1,5 @@
 </html>
+<meta charset="UTF-8">
 </body>
 <h1>Nächste Funktion auswählen</h1>
 <form action="ergebniss.php" method="post" enctype="multipart/form-data">
@@ -11,8 +12,6 @@
 
 <?php
 include("libs/functions.php");
-include("libs/neueschueler.php");
-
 echo "<h2>Sie haben ".$_POST["Option"]." gewählt.</h2>";
 $i = $_POST["Option"];
 
@@ -21,7 +20,7 @@ switch ($i) {
         echo "i ist Neueschüler </br></br>";
         getusrlognam();
         getRightID();
-        neueschuelerabfrage();
+        header('Location: ausgabeneuschueler.php'); //weiterleiten zur nächsten auswahlseite
         break;
     case "Austritte":
         echo "i ist Austritte";
