@@ -13,29 +13,36 @@
 		<input type="submit" value="Hochladen">
 		</form>
   </br></br>
-    <form>
     <h2>Bitte Wählen Sie den Upload für den Kaschuso Export für GIBS</h2>
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    <?php
+    $Teilschule = "GIBS";
+    ?>
     </form>
-    <form>
     <h2>Bitte Wählen Sie den Upload für den Kaschuso Export für KBS</h2>
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
     </form>
-    <form>
     <h2>Bitte Wählen Sie den Upload für den Kaschuso Export für EBZ</h2>
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
     </form>
-    <form>
-    <h2>Bitte Wählen Sie den Upload für den Kaschuso Export für BZGS</h2>
+    <h2>Bitte Wählen Sie den Upload für den Kaschuso Export für BZGS GB</h2>
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    </form>
+    <h2>Bitte Wählen Sie den Upload für den Kaschuso Export für BZGS HF</h2>
+    <form action="upload2.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="datei"><br>
+    <input type="submit" value="Hochladen">
+    </form>
+    <form action="funktionwahl.php" mehtod="post" enctype="multipart/form-data">
+      <input type="submit" value="Weiter">
     </form>
 	</body>
 </html>

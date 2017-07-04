@@ -4,7 +4,7 @@ function upload2(){
   include("libs/inserttodb.php");
   insertKaschusotoDB(); //die Datei direkt in die MySqldatenbank importieren (lib/inserttodb)
   getschule();
-  header('Location: funktionwahl.php'); //weiterleiten zur nächsten auswahlseite
+  header('Location: index.php'); //weiterleiten zur nächsten auswahlseite
   exit;
 }
 ?>
