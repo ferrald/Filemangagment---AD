@@ -51,7 +51,7 @@ function insertADtoDB(){
 }
 }
 
-function insertKaschusotoDB(){
+function insertKaschusotoDB($Teilschule){
   include ("dbconnect.php");
   include ("functions.php");
   $link = dbconn();
@@ -94,7 +94,7 @@ function insertKaschusotoDB(){
                       $sql .= ', ';
                   } //den text ausgeben ($data = Array)
               }
-              $sql .= ');';
+              $sql .= $Teilschule. ');';
               //echo $sql;
               mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
           }

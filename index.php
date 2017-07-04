@@ -22,6 +22,7 @@
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    <input type="hidden" name="Teilschule" value="gibsol">
     <?php
     include 'libs/teilschulabfrage.php';
     $Teilschule = "gibsol";
@@ -32,6 +33,7 @@
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    <input type="hidden" name="Teilschule" value="kbsol">
     <?php
     $Teilschule = "kbsol";
     teilschulabfrage($Teilschule);
@@ -41,6 +43,7 @@
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    <input type="hidden" name="Teilschule" value="ebzol">
     <?php
     $Teilschule = "ebzol";
     teilschulabfrage($Teilschule);
@@ -50,6 +53,7 @@
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    <input type="hidden" name="Teilschule" value="bzgsolgb">
     <?php
     $Teilschule = "bzgsolgb";
     teilschulabfrage($Teilschule);
@@ -59,6 +63,7 @@
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
+    <input type="hidden" name="Teilschule" value="bzgsolhf">
     <?php
     $Teilschule = "bzgsolhf";
     teilschulabfrage($Teilschule);
