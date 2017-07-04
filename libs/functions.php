@@ -61,4 +61,29 @@ function getRightID()
         }
     }
 }
+
+function getschule()
+{
+    $link = dbconn();
+    selectdb($link, "ADexport");
+
+    $sql    = 'ALTER TABLE Export2 ADD schule varchar(45)';
+    mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
+    $sql    = 'SELECT * FROM Export2';
+    $res = mysql_query($sql);
+    //echo $res;
+    while ($row = mysql_fetch_array($res)) {
+        $realschulid = $row["id"];
+        $schule            = preg_replace('/[^a-zA-Z]+/', '', $row["id"]); //ersetzt alles durch    ausser zahlen
+        //echo $reallogonname." ";
+        if (!empty($schule)) {
+            $sql = "UPDATE Export2
+            Set schule='" . $schule . "' where `id`= '" . $realschulid . "'";
+            //echo $sql . "</br>";
+            mysql_query($sql);
+        } else {
+            Echo "lol </br>";
+        }
+    }
+}
 ?>
