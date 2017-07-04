@@ -10,5 +10,6 @@ function teilschulabfrage($Teilschule){
     else{
       echo '<input type="checkbox" disabled="disabled">';
     }
+    return $gezählt;
 }
 ?>
