@@ -42,7 +42,7 @@
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
     <?php
-    $Teilschule = "EBZ";
+    $Teilschule = "ebzol";
     teilschulabfrage($Teilschule);
     ?>
     </form>
@@ -51,7 +51,7 @@
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
     <?php
-    $Teilschule = "BZGS";
+    $Teilschule = "bzgsolgb";
     teilschulabfrage($Teilschule);
     ?>
     </form>
@@ -60,7 +60,7 @@
     <input type="file" name="datei"><br>
     <input type="submit" value="Hochladen">
     <?php
-    $Teilschule = "ddddd";
+    $Teilschule = "bzgsolhf";
     teilschulabfrage($Teilschule);
     ?>
     </form>
