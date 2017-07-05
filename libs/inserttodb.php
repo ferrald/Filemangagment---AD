@@ -55,7 +55,8 @@ function insertKaschusotoDB($Teilschule){
   include ("dbconnect.php");
   include ("functions.php");
   $link = dbconn();
-  deletedb();
+  selectdb($link, 'Adexport');
+  //deletedb();
   echo $_FILES['datei']['tmp_name'] . "</br>";
   $dataname   = $_FILES['datei']['name'];
   echo $dataname;
@@ -69,7 +70,7 @@ function insertKaschusotoDB($Teilschule){
               $fieldnames = 0; //field name wird auf 0 gesetzt dass nur die Spaltennamen gezogen werden
 
               //createdb(); //db erstell funktion aufrufen
-              selectdb($link, 'Adexport'); // DB Auswählen, wir geben die DB verbindung (funktion dbconn) und den 'Datenbank Namen' mit
+               // DB Auswählen, wir geben die DB verbindung (funktion dbconn) und den 'Datenbank Namen' mit
               $sql = 'CREATE TABLE Export2' . '('; //Tabelle erstellen namens Export 2
               for ($c = 0; $c < $num - 1; $c++) { //Für jeden Datensatz wird der namen geschrieben
                   $sql .= '`' . $data[$c] . '` varchar(150)';

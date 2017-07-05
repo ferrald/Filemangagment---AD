@@ -1,8 +1,10 @@
 <?php
-function deletedb()
+
+function delteilschul($ts)
 {
-    $sql    = 'DROP TABLE Export1 AND Export2';
-    $result = mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
+  $sql    = 'DELETE FROM `Export2` WHERE `id` LIKE "'.$ts.'%"';
+  mysql_query($sql);
+  echo $sql;
 }
 
 function createdb()
