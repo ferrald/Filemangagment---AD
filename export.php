@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titel</title>
     <?php
-include("libs/dbconnect.php");
-include("libs/functions.php");
+include_once("libs/dbconnect.php");
+include_once("libs/functions.php");
 ?>
  </head>
     <body>
@@ -15,7 +15,7 @@ include("libs/functions.php");
 <select name="file">
   <option value="">- Select File -
     <?php
-include("libs/upload.php");
+include_once("libs/upload.php");
 auswahldatei();
 ?>
 </select>

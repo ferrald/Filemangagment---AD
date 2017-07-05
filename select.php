@@ -2,7 +2,7 @@
 <html lang="de">
   <head>
     <?php
-    include("libs/upload.php");
+    include_once("libs/upload.php");
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

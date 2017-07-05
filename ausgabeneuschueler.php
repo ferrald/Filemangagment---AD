@@ -1,5 +1,5 @@
 <?php
-include("libs/neueschueler.php");
+include_once("libs/neueschueler.php");
         neueschuelerabfrage();
         
 ?>

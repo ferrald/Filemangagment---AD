@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titel</title>
     <?php
-    include ("libs/dbconnect.php");
+    include_once ("libs/dbconnect.php");
     $link = dbconn();
     selectdb($link, "ADexport");
     ?>
@@ -24,7 +24,7 @@
     <input type="submit" value="Hochladen">
     <input type="hidden" name="Teilschule" value="gibsol">
     <?php
-    include 'libs/teilschulabfrage.php';
+    include_once 'libs/teilschulabfrage.php';
     $Teilschule = "gibsol";
     teilschulabfrage($Teilschule);
     ?>

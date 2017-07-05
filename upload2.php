@@ -7,6 +7,6 @@
   </head>
 
 <?php
-include ("libs/upload2.php");
+include_once ("libs/upload2.php");
 upload2();//Die upload2(); funktion aus dem file libs/upload2.php aufrufen
 ?>

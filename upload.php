@@ -7,7 +7,7 @@
   </head>
 
 <?php
-include ("libs/upload.php");
+include_once ("libs/upload.php");
 
 upload();//Die upload(); funktion aus dem file libs/upload.php aufrufen
 

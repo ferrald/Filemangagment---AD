@@ -1,9 +1,8 @@
 <?php
 function insertADtoDB(){
-  include ("dbconnect.php");
-  include ("functions.php");
+  include_once ("dbconnect.php");
+  include_once ("functions.php");
   $link = dbconn();
-  deletedb();
   echo $_FILES['datei']['tmp_name'] . "</br>";
   $dataname   = $_FILES['datei']['name'];
   echo $dataname;
@@ -52,10 +51,9 @@ function insertADtoDB(){
 }
 
 function insertKaschusotoDB($Teilschule){
-  include ("dbconnect.php");
-  include ("functions.php");
+  include_once ("dbconnect.php");
+  include_once ("functions.php");
   $link = dbconn();
-  deletedb();
   echo $_FILES['datei']['tmp_name'] . "</br>";
   $dataname   = $_FILES['datei']['name'];
   echo $dataname;
@@ -94,7 +92,7 @@ function insertKaschusotoDB($Teilschule){
                       $sql .= ', ';
                   } //den text ausgeben ($data = Array)
               }
-              $sql .= $Teilschule. ');';
+              $sql .=  ');';
               //echo $sql;
               mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
           }

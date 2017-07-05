@@ -1,9 +1,11 @@
 <?php
-function deletedb()
-{
-    $sql    = 'DROP TABLE Export1 AND Export2';
-    $result = mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
+function delteilschul($ts)
+ {
+  $sql    = 'DELETE FROM `Export2` WHERE `id` LIKE "'.$ts.'%"';
+  mysql_query($sql);
+  echo $sql;
 }
+
 
 function createdb()
 {
@@ -13,7 +15,7 @@ function createdb()
 
 function getusrlognam()
 {
-    include ("dbconnect.php");
+    include_once ("dbconnect.php");
     $link = dbconn();
     selectdb($link, "ADexport");
 

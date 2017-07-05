@@ -1,7 +1,7 @@
 <?php
 function neueschuelerabfrage(){
-  include("libs/dbconnect.php");
-  include("libs/csvspaltennamen.php");
+  include_once("libs/dbconnect.php");
+  include_once("libs/csvspaltennamen.php");
   $link = dbconn();
   selectdb($link, 'Adexport');
   $sql    = "SELECT * FROM Export2 WHERE NOT EXISTS(SELECT NULL FROM Export1 WHERE Export1.verg_id = Export2.verg_id)AND Export2.benutzerstatus = 'Ja'";

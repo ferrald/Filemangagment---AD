@@ -11,7 +11,7 @@
 </form>
 
 <?php
-include("libs/functions.php");
+include_once("libs/functions.php");
 echo "<h2>Sie haben ".$_POST["Option"]." gewählt.</h2>";
 $i = $_POST["Option"];
 
