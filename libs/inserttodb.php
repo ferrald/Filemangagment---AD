@@ -1,7 +1,7 @@
 <?php
 function insertADtoDB(){
   include ("dbconnect.php");
-  include ("functions.php");
+  include ("libs/functions.php");
   $link = dbconn();
   deletedb();
   echo $_FILES['datei']['tmp_name'] . "</br>";
@@ -53,7 +53,7 @@ function insertADtoDB(){
 
 function insertKaschusotoDB($Teilschule){
   include ("dbconnect.php");
-  include ("functions.php");
+  include("libs/functions.php");
   $link = dbconn();
   selectdb($link, 'Adexport');
   //deletedb();

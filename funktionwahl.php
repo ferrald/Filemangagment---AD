@@ -2,7 +2,7 @@
 </body>
 <?php
 include 'libs/dbconnect.php';
-include("libs/functions.php");
+include_once ("libs/functions.php");
 getschule();
 ?>
 <h1>Funktion auswählen</h1>

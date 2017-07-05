@@ -6,7 +6,7 @@
     <title>Titel</title>
     <?php
 include("libs/dbconnect.php");
-include("libs/functions.php");
+include_once ("libs/functions.php");
 ?>
  </head>
     <body>
