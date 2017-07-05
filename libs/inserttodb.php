@@ -94,7 +94,7 @@ function insertKaschusotoDB($Teilschule){
                       $sql .= ', ';
                   } //den text ausgeben ($data = Array)
               }
-              $sql .= $Teilschule. ');';
+              $sql .= ');';
               //echo $sql;
               mysql_query($sql); //sql übergeben (Wichtig sonst funzt SQL nicht)
           }
