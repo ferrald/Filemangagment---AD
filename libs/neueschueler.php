@@ -4,7 +4,7 @@ function neueschuelerabfrage(){
   include_once("libs/csvspaltennamen.php");
   $link = dbconn();
   selectdb($link, 'Adexport');
-  $sql    = "SELECT DISTINCT * FROM `export2` LEFT JOIN `export1` ON export1.`name` = benutzername WHERE `benutzerstatus` = 'Ja' AND `User Logon Name` IS NULL AND `regelklasse` LIKE '%17%'";
+  $sql    = "SELECT DISTINCT `export2`.`name` , `export2`.`vorname` , `export2`.`verg_ID` as verg_ID, id, regelklasse, telefon, mobile FROM `export2` LEFT JOIN `export1` ON export1.`name` = benutzername WHERE `benutzerstatus` = 'Ja' AND `User Logon Name` IS NULL AND `regelklasse` LIKE '%17%'";
     $resu = mysql_query($sql);
     // output headers so that the file is downloaded rather than displayed
     header('Content-Type: text/csv; charset=utf-8');
