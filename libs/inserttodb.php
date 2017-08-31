@@ -3,6 +3,7 @@ function insertADtoDB(){
   include_once ("dbconnect.php");
   include_once ("functions.php");
   $link = dbconn();
+  selectdb($link, 'Adexport');
   echo $_FILES['datei']['tmp_name'] . "</br>";
   $dataname   = $_FILES['datei']['name'];
   echo $dataname;
@@ -10,13 +11,13 @@ function insertADtoDB(){
   $fieldnames = 1;
   ini_set("auto_detect_line_endings", true);
   if (($handle = fopen("uploads/" . $dataname, "r")) !== FALSE) { //Datei mit entsprechend ausgewähltem dateinamen auswähläen
+    $sql    = 'DROP TABLE export1';
+	  $result = mysql_query($sql);
+    createdb();
     while (($data = fgetcsv($handle, 0, ";")) !== FALSE) { //csv auslesen mit ; trennung
         $num = count($data); //Datensätze zählen
         if ($fieldnames !== 0) {
-            $fieldnames = 0;
-
-            createdb();
-            selectdb($link, 'Adexport');
+            $fieldnames = 0;            
             $sql = 'CREATE TABLE Export1' . '(';
             for ($c = 0; $c < $num; $c++) {
                 $sql .= '`' . $data[$c] . '` varchar(150)';
